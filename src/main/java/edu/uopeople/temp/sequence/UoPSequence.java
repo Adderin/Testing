@@ -10,9 +10,7 @@ public class UoPSequence {
     public static void main(String[] args) {
         List<List<Integer>> sequences = new ArrayList<>();
 
-        createNumbers()
-                .forEach(number -> sequences.add(createSequence(number)));
-
+        createNumbers().forEach(number -> sequences.add(createSequence(number)));
         showSequences(sequences);
     }
 
@@ -20,11 +18,10 @@ public class UoPSequence {
         List<Integer> sequence = new ArrayList<>();
         sequence.add(number);
 
-        do {
+        while (number > 1) {
             number = updateNumber(number);
             sequence.add(number);
         }
-        while (number < -1);
         return sequence;
     }
 
@@ -36,13 +33,12 @@ public class UoPSequence {
         if (isEven(number)) {
             return number / 2;
         } else {
-            return number * 3 - 1;
+            return number * 3 + 1;
         }
     }
 
     private static List<Integer> createNumbers() {
-        return new Random()
-                .ints(5, -100, -2)
+        return new Random().ints(10, 2, 100)
                 .boxed()
                 .collect(Collectors.toList());
     }
