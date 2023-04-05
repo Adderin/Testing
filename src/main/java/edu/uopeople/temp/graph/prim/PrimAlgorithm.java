@@ -38,7 +38,7 @@ public class PrimAlgorithm {
         addEdge(graph, 1, 2, 3);  // 2-3 -> 3
         addEdge(graph, 1, 4, 4);  // 2-5 -> 4
         addEdge(graph, 2, 3, 2);  // 3-4 -> 2
-        addEdge(graph, 3, 5, 3);  // 4-5 -> 3
+        addEdge(graph, 3, 4, 3);  // 4-5 -> 3
         addEdge(graph, 4, 5, 1);  // 5-6 -> 1
 
         return graph;
